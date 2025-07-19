@@ -238,10 +238,22 @@
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1060520815685630&ev=PageView&noscript=1"
     /></noscript>
+
     <script>
-      // O valor deve ser o preço do seu produto, ex: 97.00
-      // A moeda deve ser 'BRL' para Reais.
-      fbq('track', 'Purchase', {value: 19.90, currency: 'BRL'});
+    fbq('track', 'Purchase', {
+    value: 19.90, // Lembre-se de substituir por uma variável da sua plataforma!
+    currency: 'BRL',
+
+    // Aqui você coloca o seu ID criado:
+    content_ids: ['PRODUTO-1990'], 
+    contents: [
+        {
+        id: 'PRODUTO-1990', // Repita o mesmo ID aqui
+        quantity: 1
+        }
+    ],
+    content_type: 'product'
+    });
     </script>
 <!-- End Meta Pixel Code -->
 
